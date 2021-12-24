@@ -28,5 +28,5 @@ map("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 map("n", "fb", ":Telescope buffers<CR>", opts)
 
 -- Trouble bindings
-map("n", "<leader>xx", ":TroubeToggle<CR>", opts)
-map("n", "<leader>xf", ":TroubeToggle quickfix<CR>", opts)
+map("n", "<leader>xx", ":TroubleToggle<CR>", opts)
+map("n", "<leader>xf", ":TroubleToggle quickfix<CR>", opts)

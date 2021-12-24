@@ -1,6 +1,8 @@
 -- Harun's config
 -- Friday Dec 24, 2021
 
+vim.g.mapleader = ','
+
 pcall(require, "impatient")
 
 if require "harun.first_load"() then
