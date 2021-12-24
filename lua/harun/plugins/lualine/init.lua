@@ -1,3 +1,5 @@
+local config = require('harun.config')
+
 local function current_buffer_number()
   return "﬘ " .. vim.api.nvim_get_current_buf()
 end
@@ -25,7 +27,7 @@ end
 require("lualine").setup {
   options = {
     icons_enabled = true,
-    theme = "moonfly",
+    theme = config.theme,
     component_separators = { left = "⦚", right = "  " },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {},

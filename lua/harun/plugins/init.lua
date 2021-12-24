@@ -163,4 +163,5 @@ return require("packer").startup(
     -- themes
     use "whatsthatsmell/codesmell_dark.vim"
     use "bluz71/vim-moonfly-colors"
+    use "sainnhe/everforest"
   end)

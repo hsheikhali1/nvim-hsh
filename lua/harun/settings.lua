@@ -1,9 +1,11 @@
+local config = require('harun.config')
+
 local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
 -- default indent
-local indent = 2
+local indent = config.indent
 
 cmd([[
 	filetype plugin indent on
@@ -78,5 +80,3 @@ opt.updatetime = 100
 
 -- theme
 opt.termguicolors = true
---vim.cmd([[colorscheme codesmell_dark]])
-vim.cmd([[colorscheme moonfly]])
