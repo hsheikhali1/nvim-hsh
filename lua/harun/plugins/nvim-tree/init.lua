@@ -29,12 +29,18 @@ local args = {
   diagnostics = {
     enable = true,
   },
-  ignore_ft_on_setup = {},
+  ignore_ft_on_setup = {
+    'startify',
+    'dashboard',
+    'alpha',
+  },
   update_focused_file = {
     enable = true,
   },
   view = {
-    width = 40,
+    width = 35,
+    number = true,
+    relativenumber = true,
   },
   git = {
     ignore = true,
