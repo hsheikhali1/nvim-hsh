@@ -131,7 +131,7 @@ return require("packer").startup(
       "nvim-lualine/lualine.nvim",
       config = function()
         -- @TODO add configuration for lualine.
-        require("harun.plugins.lualine").setup()
+        require("harun.plugins.lualine")
       end
     }
     use {
