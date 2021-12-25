@@ -30,3 +30,7 @@ map("n", "fb", ":Telescope buffers<CR>", opts)
 -- Trouble bindings
 map("n", "<leader>xx", ":TroubleToggle<CR>", opts)
 map("n", "<leader>xf", ":TroubleToggle quickfix<CR>", opts)
+
+-- bufferline
+map("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
+map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)

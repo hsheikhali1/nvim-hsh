@@ -153,6 +153,13 @@ return require("packer").startup(
 				require('todo-comments').setup {}
 			end
 		}
+    use {
+      'akinsho/bufferline.nvim',
+      requires = 'kyazdani42/nvim-web-devicons',
+      config = function()
+        require("bufferline").setup()
+      end
+    }
 
     -- language specific plugins --
     -- markdown
@@ -164,4 +171,5 @@ return require("packer").startup(
     use "whatsthatsmell/codesmell_dark.vim"
     use "bluz71/vim-moonfly-colors"
     use "sainnhe/everforest"
+    use "rebelot/kanagawa.nvim"
   end)

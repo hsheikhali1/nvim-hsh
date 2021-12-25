@@ -1,5 +1,5 @@
 local config = {
-  theme = "everforest",
+  theme = "kanagawa",
   indent = 2
 }
 
