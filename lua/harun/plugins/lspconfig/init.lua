@@ -35,6 +35,7 @@ local servers = {
   'rust_analyzer',
   'html',
   'cssls',
+  'emmet_ls'
 }
 
 for _, lsp in ipairs(servers) do

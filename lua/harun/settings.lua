@@ -80,3 +80,11 @@ opt.updatetime = 100
 
 -- theme
 opt.termguicolors = true
+
+
+-- tagalong doesnt have a lua package so need to set settings here
+vim.g.tagalong_filetypes = {'html', 'javascriptreact', 'javascript', 'typescript', 'typescriptreact'}
+-- nvim blankline
+vim.g.indent_blankline_filetype_exclude = { 'NvimTree', 'terminal' }
+vim.g.indentLine_bufNameExclude = { 'NvimTree', 'terminal' }
+vim.g.indentLine_bufTypeExclude = { 'terminal', 'NvimTree' }

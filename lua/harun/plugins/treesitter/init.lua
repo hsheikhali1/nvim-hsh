@@ -18,6 +18,7 @@ local defaults = {
   highlight = {
     enable = true,
     use_languagetree = true,
+    disable = { "html" },
   },
   indent = {
     enable = true,

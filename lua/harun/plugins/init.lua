@@ -125,6 +125,7 @@ return require("packer").startup(
         require("harun.plugins.null-ls")
       end
     }
+    use "AndrewRadev/tagalong.vim"
 
     -- ui
     use {
