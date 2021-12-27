@@ -126,6 +126,7 @@ return require("packer").startup(
       end
     }
     use "AndrewRadev/tagalong.vim"
+    use "windwp/nvim-ts-autotag"
 
     -- ui
     use {
