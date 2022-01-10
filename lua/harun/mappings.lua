@@ -1,24 +1,36 @@
-local map = vim.api.nvim_set_keymap
+local merge = function(...)
+  return vim.tbl_deep_extend('force', ...)
+end
 
-local opts = { noremap = true, silent = true }
+local map = function(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = merge(options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
 
--- use jk to close
-map("i", "jk", "<esc>", { noremap = true, silent = true })
+local opts = { noremap=true, silent=true }
 
--- nvim tree
-map("n", "<leader>a", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+-- map jk to esc
+map("i", "jk", "<Esc>", opts)
+
+-- map <esc> to clear highlighting for search
+map("n", "<Esc>", ":nohl<CR>", opts)
+
+-- Nvimtree mappings
+map("n", "<leader>a", ":NvimTreeToggle<CR>", opts)
 
 
--- treesitter mappings
+-- telescope mappings
 map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 map("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
-map("n", "<leader>fb", ":Telescope file_browser<CR>", opts)
-map("n", "<leader>cs", ":Telescope colorscheme<CR>", opts)
+map("n", "fb", ":Telescope buffers<CR>", opts)
 
+-- Trouble bindings
+map("n", "<leader>xx", ":TroubleToggle<CR>", opts)
+map("n", "<leader>xf", ":TroubleToggle quickfix<CR>", opts)
 
--- defauilt mappings
-map("n", "<esc>", ":nohl<CR>", opts)
-
--- trouble
-map("n", "<leader>xx", ":TroubleToggle<cr>", opts)
-map("n", "<leader>xf", ":TroubleToggle quickfix<cr>", opts)
+-- bufferline
+map("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
+map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
