@@ -54,7 +54,7 @@ opt.list = true
 vim.opt.listchars:append("eol:↴")
 opt.mouse = 'a'
 opt.number = true
-opt.rnu = true
+opt.rnu = false
 opt.scrolloff = 18
 opt.showmode = false
 opt.sidescrolloff = 3 -- Lines to scroll horizontally

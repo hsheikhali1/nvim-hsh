@@ -116,7 +116,10 @@ return require("packer").startup(
     -- telescope plugins
     use {
       'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }
+      requires = { {'nvim-lua/plenary.nvim'} },
+      config = function()
+        require('harun.plugins.telescope')
+      end
     }
     use "cljoly/telescope-repo.nvim"
     use {
@@ -126,6 +129,7 @@ return require("packer").startup(
       end
     }
     use "AndrewRadev/tagalong.vim"
+    use 'ThePrimeagen/git-worktree.nvim'
 
     -- ui
     use {
@@ -173,4 +177,5 @@ return require("packer").startup(
     use "bluz71/vim-moonfly-colors"
     use "sainnhe/everforest"
     use "rebelot/kanagawa.nvim"
+    use "EdenEast/nightfox.nvim"
   end)

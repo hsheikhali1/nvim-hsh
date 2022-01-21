@@ -4,7 +4,11 @@ local availableThemes = {
   "everforest",
   "codesmell_dark",
   "moonfly",
-  "kanagawa"
+  "kanagawa",
+  "nightfox",
+  "nordfox",
+  "dayfox",
+  "dawnfox"
 }
 
 for _, v in ipairs(availableThemes) do
