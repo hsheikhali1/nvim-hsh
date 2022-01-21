@@ -34,3 +34,6 @@ map("n", "<leader>xf", ":TroubleToggle quickfix<CR>", opts)
 -- bufferline
 map("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
+
+-- lazygit
+map("n", "<leader>gg", ":LazyGit<CR>", opts)

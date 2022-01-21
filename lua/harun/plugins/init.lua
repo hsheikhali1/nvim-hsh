@@ -113,6 +113,7 @@ return require("packer").startup(
         }
       end
     }
+    use 'kdheepak/lazygit.nvim'
     -- telescope plugins
     use {
       'nvim-telescope/telescope.nvim',
