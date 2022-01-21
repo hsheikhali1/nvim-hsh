@@ -130,6 +130,7 @@ return require("packer").startup(
     }
     use "AndrewRadev/tagalong.vim"
     use 'ThePrimeagen/git-worktree.nvim'
+    use "windwp/nvim-ts-autotag"
 
     -- ui
     use {
