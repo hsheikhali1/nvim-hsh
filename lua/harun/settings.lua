@@ -51,7 +51,7 @@ opt.cursorline = true
 opt.laststatus = 2
 opt.lazyredraw = true
 opt.list = true
-vim.opt.listchars:append("eol:↴")
+--vim.opt.listchars:append("eol:↴")
 opt.mouse = 'a'
 opt.number = true
 opt.rnu = false
@@ -61,7 +61,7 @@ opt.sidescrolloff = 3 -- Lines to scroll horizontally
 opt.signcolumn = 'yes'
 opt.splitbelow = true -- Open new split below
 opt.splitright = true -- Open new split to the right
-opt.wrap = false
+opt.wrap = true
 
 -- backups
 opt.backup = false
@@ -80,6 +80,9 @@ opt.updatetime = 100
 
 -- theme
 opt.termguicolors = true
+vim.cmd([[
+set background=dark
+]])
 
 
 -- tagalong doesnt have a lua package so need to set settings here

@@ -57,6 +57,12 @@ return require("packer").startup(
         require("harun.plugins.treesitter")
       end
     }
+    use {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+      config = function()
+        require("harun.plugins.treesitter")
+      end
+    }
     use({
       'hrsh7th/nvim-cmp',
       config = function()
@@ -123,6 +129,7 @@ return require("packer").startup(
       end
     }
     use "cljoly/telescope-repo.nvim"
+    use "nvim-telescope/telescope-media-files.nvim"
     use {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
@@ -180,4 +187,24 @@ return require("packer").startup(
     use "sainnhe/everforest"
     use "rebelot/kanagawa.nvim"
     use "EdenEast/nightfox.nvim"
+    use "lifepillar/vim-solarized8"
+    use "Rigellute/rigel"
+    use 'NLKNguyen/papercolor-theme'
+    use 'navarasu/onedark.nvim'
+    use 'projekt0n/github-nvim-theme'
+    use 'shaunsingh/moonlight.nvim'
+    -- experimental
+    use {
+      'mrjones2014/legendary.nvim',
+      config = function()
+        local keymaps = {
+          { '<leader>a', ':NvimTreeToggle<CR>', description = 'Toggle file tree' }
+        }
+        require('legendary').setup({
+          include_builtin = true,
+          select_prompt = 'Legendary',
+          keymaps = keymaps
+        })
+      end
+    }
   end)

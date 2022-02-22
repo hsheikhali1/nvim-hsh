@@ -24,6 +24,23 @@ local function current_working_dir()
   return "~" .. cwd
 end
 
+-- need to add this for solarized colors
+if config.theme == "solarized8" then
+  config.theme = "solarized_dark"
+end
+
+if config.theme == "solarized8_high" then
+  config.theme = "solarized_dark"
+end
+
+if config.theme == "solarized8_flat" then
+  config.theme = "solarized_dark"
+end
+
+if config.theme == "github_dark_default" then
+  config.theme = "github"
+end
+
 require("lualine").setup {
   options = {
     icons_enabled = true,

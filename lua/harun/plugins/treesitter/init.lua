@@ -1,4 +1,14 @@
 local defaults = {
+  textobjects = {
+    lsp_interop = {
+      enable = true,
+      border = 'none',
+      peek_definition_code = {
+        ["<leader>df"] = "@function.outer",
+        ["<leader>dF"] = "@class.outer",
+      },
+    },
+  },
   ensure_installed = {
     'css',
     'html',
@@ -37,3 +47,4 @@ local defaults = {
 }
 
 require('nvim-treesitter.configs').setup(defaults)
+

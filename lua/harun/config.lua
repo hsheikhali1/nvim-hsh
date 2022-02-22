@@ -1,5 +1,5 @@
 local config = {
-  theme = "moonfly",
+  theme = "moonlight",
   indent = 2
 }
 
