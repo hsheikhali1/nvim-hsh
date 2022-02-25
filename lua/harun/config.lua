@@ -1,5 +1,5 @@
 local config = {
-  theme = "moonlight",
+  theme = "github_dark_default",
   indent = 2
 }
 

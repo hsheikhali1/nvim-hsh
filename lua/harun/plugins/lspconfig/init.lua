@@ -37,41 +37,20 @@ local servers = {
   'cssls',
   'emmet_ls',
   'tailwindcss',
-  'sumneko_lua'
 }
 
-local version = vim.fn.system('brew list lua-language-server | head -1 | grep -o "[0-9]*\\.[0-9]*\\.[0-9]*"'):gsub(
-  '\n',
-  ''
-)
-local base_root = '/usr/local/homebrew/Cellar/lua-language-server/' .. version
-local bin_root = base_root .. '/bin/'
+-- local version = vim.fn.system('brew list lua-language-server | head -1 | grep -o "[0-9]*\\.[0-9]*\\.[0-9]*"'):gsub(
+--   '\n',
+--   ''
+-- )
+-- local base_root = '/usr/local/homebrew/Cellar/lua-language-server/' .. version
+-- local bin_root = base_root .. '/bin/'
 
 for _, lsp in ipairs(servers) do
-  if lsp == "sumneko_lua" then
-    nvim_lsp[lsp].setup {
-cmd = {bin_root, "-E", base_root .. "/main.lua"},
-    settings = {
-        Lua = {
-          runtime = {
-              -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-              version = 'LuaJIT',
-              -- Setup your lua path
-              path = vim.split(package.path, ';')
-          },
-         diagnostics = {
-            -- Get the language server to recognize the `vim` global
-            globals = {'vim'}
-        },
-      }
-    }
-  }
-  else
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150
     }
   }
-  end
 end
