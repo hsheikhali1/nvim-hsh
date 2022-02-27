@@ -1,5 +1,5 @@
 local config = {
-  theme = "github_dark_default",
+  theme = "material",
   indent = 2
 }
 

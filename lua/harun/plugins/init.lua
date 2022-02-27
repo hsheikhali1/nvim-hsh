@@ -193,6 +193,7 @@ return require("packer").startup(
     use 'navarasu/onedark.nvim'
     use 'projekt0n/github-nvim-theme'
     use 'shaunsingh/moonlight.nvim'
+    use 'marko-cerovac/material.nvim'
     -- experimental
     use {
       'mrjones2014/legendary.nvim',

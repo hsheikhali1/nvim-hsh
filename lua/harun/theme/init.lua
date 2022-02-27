@@ -17,6 +17,7 @@ local availableThemes = {
   "onedark",
   "github_dark_default",
   "moonlight",
+  "material"
 }
 
 for _, v in ipairs(availableThemes) do
@@ -26,6 +27,18 @@ for _, v in ipairs(availableThemes) do
           style = 'deep'
       }
       require('onedark').load()
+    elseif v == "material" then
+      require('material').setup{
+        italics = {
+          comments = true, -- Enable italic comments
+          keywords = true, -- Enable italic keywords
+          functions = false, -- Enable italic functions
+          strings = true, -- Enable italic strings
+          variables = false -- Enable italic variables
+        },
+      }
+      vim.g.material_style = "deep ocean"
+      vim.cmd("colorscheme " .. v)
     else
       vim.cmd("colorscheme " .. v)
     end
