@@ -43,13 +43,6 @@ local servers = {
   'tailwindcss',
 }
 
--- local version = vim.fn.system('brew list lua-language-server | head -1 | grep -o "[0-9]*\\.[0-9]*\\.[0-9]*"'):gsub(
---   '\n',
---   ''
--- )
--- local base_root = '/usr/local/homebrew/Cellar/lua-language-server/' .. version
--- local bin_root = base_root .. '/bin/'
-
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
