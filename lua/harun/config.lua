@@ -1,6 +1,7 @@
 local config = {
-  theme = "kanagawa",
-  indent = 2
+  theme = "material",
+  indent = 2,
+  format_on_save = false
 }
 
 

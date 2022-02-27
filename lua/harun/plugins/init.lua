@@ -57,6 +57,12 @@ return require("packer").startup(
         require("harun.plugins.treesitter")
       end
     }
+    use {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+      config = function()
+        require("harun.plugins.treesitter")
+      end
+    }
     use({
       'hrsh7th/nvim-cmp',
       config = function()
@@ -113,12 +119,17 @@ return require("packer").startup(
         }
       end
     }
+    use 'kdheepak/lazygit.nvim'
     -- telescope plugins
     use {
       'nvim-telescope/telescope.nvim',
-      requires = { {'nvim-lua/plenary.nvim'} }
+      requires = { {'nvim-lua/plenary.nvim'} },
+      config = function()
+        require('harun.plugins.telescope')
+      end
     }
     use "cljoly/telescope-repo.nvim"
+    use "nvim-telescope/telescope-media-files.nvim"
     use {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
@@ -126,6 +137,7 @@ return require("packer").startup(
       end
     }
     use "AndrewRadev/tagalong.vim"
+    use 'ThePrimeagen/git-worktree.nvim'
     use "windwp/nvim-ts-autotag"
 
     -- ui
@@ -174,4 +186,26 @@ return require("packer").startup(
     use "bluz71/vim-moonfly-colors"
     use "sainnhe/everforest"
     use "rebelot/kanagawa.nvim"
+    use "EdenEast/nightfox.nvim"
+    use "lifepillar/vim-solarized8"
+    use "Rigellute/rigel"
+    use 'NLKNguyen/papercolor-theme'
+    use 'navarasu/onedark.nvim'
+    use 'projekt0n/github-nvim-theme'
+    use 'shaunsingh/moonlight.nvim'
+    use 'marko-cerovac/material.nvim'
+    -- experimental
+    use {
+      'mrjones2014/legendary.nvim',
+      config = function()
+        local keymaps = {
+          { '<leader>a', ':NvimTreeToggle<CR>', description = 'Toggle file tree' }
+        }
+        require('legendary').setup({
+          include_builtin = true,
+          select_prompt = 'Legendary',
+          keymaps = keymaps
+        })
+      end
+    }
   end)

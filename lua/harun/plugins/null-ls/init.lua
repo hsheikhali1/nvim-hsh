@@ -1,4 +1,5 @@
 local null_ls = require('null-ls')
+local config = require('harun.config')
 
 local has_eslint_config = function(u)
   return u.root_has_file('.eslintrc')
@@ -11,7 +12,20 @@ local has_eslint_config = function(u)
 end
 
 
+
 require('null-ls').setup({
+  on_attach = function(client)
+    if config.format_on_save then
+      if client.resolved_capabilities.document_formatting then
+        vim.cmd([[
+          augroup LspFormatting
+            autocmd! * <buffer>
+            autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+          augroup END
+        ]])
+      end
+    end
+  end,
   -- you must define at least one source for the plugin to work
   sources = {
     null_ls.builtins.code_actions.eslint_d.with({
