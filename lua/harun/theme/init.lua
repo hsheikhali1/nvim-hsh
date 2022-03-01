@@ -21,10 +21,10 @@ local availableThemes = {
 }
 
 for _, v in ipairs(availableThemes) do
-  if v == config.theme then
+  if v == config.theme.name then
     if v == "onedark" then
       require('onedark').setup {
-          style = 'deep'
+          style = config.theme.variant
       }
       require('onedark').load()
     elseif v == "material" then
@@ -37,7 +37,7 @@ for _, v in ipairs(availableThemes) do
           variables = false -- Enable italic variables
         },
       }
-      vim.g.material_style = "deep ocean"
+      vim.g.material_style = config.theme.variant
       vim.cmd("colorscheme " .. v)
     else
       vim.cmd("colorscheme " .. v)
