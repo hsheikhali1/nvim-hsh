@@ -16,6 +16,7 @@ local availableThemes = {
   "PaperColor",
   "onedark",
   "github_dark_default",
+  "github_light_default",
   "moonlight",
   "material"
 }

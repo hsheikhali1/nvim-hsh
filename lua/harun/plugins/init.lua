@@ -158,7 +158,12 @@ return require("packer").startup(
     -- stablize neovim when opening buffers/splits
     use { "luukvbaal/stabilize.nvim", config = function() require("stabilize").setup() end }
     -- better ui api with neovim 0.6
-    use { "stevearc/dressing.nvim" }
+    use {
+      "stevearc/dressing.nvim",
+      config = function()
+        require("harun.plugins.dressing")
+      end
+    }
     use "p00f/nvim-ts-rainbow"
   	use {
 			"folke/todo-comments.nvim",

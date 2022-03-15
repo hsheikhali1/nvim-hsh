@@ -41,6 +41,10 @@ if config.theme.name == "github_dark_default" then
   config.theme.name = "github"
 end
 
+if config.theme.name == "github_light_default" then
+  config.theme.name = "github"
+end
+
 require("lualine").setup {
   options = {
     icons_enabled = true,
