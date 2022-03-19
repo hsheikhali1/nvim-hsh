@@ -45,6 +45,10 @@ if config.theme.name == "github_light_default" then
   config.theme.name = "github"
 end
 
+if config.theme.name == "ayu-dark" then
+  config.theme.name = "ayu"
+end
+
 require("lualine").setup {
   options = {
     icons_enabled = true,

@@ -1,9 +1,10 @@
 local config = {
   theme = {
-    name = "moonfly",
+    -- name = "ayu-dark",
+    -- name = "moonfly",
     -- name = "github_dark_default",
-    -- name = "moonlight",
-    variant = ""
+    name = "onedark",
+    variant = "darker"
   },
   indent = 2,
   format_on_save = true
