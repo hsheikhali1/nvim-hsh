@@ -19,7 +19,8 @@ local availableThemes = {
   "github_light_default",
   "moonlight",
   "material",
-  "ayu-dark"
+  "ayu-dark",
+  "night-owl"
 }
 
 for _, v in ipairs(availableThemes) do

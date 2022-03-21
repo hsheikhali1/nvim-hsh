@@ -200,6 +200,7 @@ return require("packer").startup(
     use 'shaunsingh/moonlight.nvim'
     use 'marko-cerovac/material.nvim'
     use 'Shatur/neovim-ayu'
+    use 'haishanh/night-owl.vim'
     -- experimental
     use {
       'mrjones2014/legendary.nvim',

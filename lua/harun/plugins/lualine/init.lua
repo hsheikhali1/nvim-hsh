@@ -49,14 +49,21 @@ if config.theme.name == "ayu-dark" then
   config.theme.name = "ayu"
 end
 
+if config.theme.name == "night-owl" then
+  config.theme.name = "nightfox"
+end
+
 require("lualine").setup {
   options = {
     icons_enabled = true,
     theme = config.theme.name,
     component_separators = { left = "⦚", right = "  " },
     section_separators = { left = "", right = "" },
+    -- section_separators = { left = '', right = '' },
+    -- component_separators = { left = '', right = '' },
     disabled_filetypes = {},
     always_divide_middle = false,
+    globalstatus = false, -- default: false
   },
   sections = {
     lualine_a = { "mode" },
