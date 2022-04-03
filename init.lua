@@ -16,3 +16,5 @@ require("harun.mappings")
 require("harun.settings")
 
 require("harun.theme")
+
+--require("harun.start_up")

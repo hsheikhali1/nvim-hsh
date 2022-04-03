@@ -1,8 +1,6 @@
 local config = require('harun.config')
 
-local cmd = vim.cmd
-local opt = vim.opt
-local g = vim.g
+local cmd = vim.cmd local opt = vim.opt local g = vim.g
 
 -- default indent
 local indent = config.indent
@@ -50,7 +48,7 @@ opt.wildmenu = true
 opt.cursorline = true
 opt.laststatus = 2
 opt.lazyredraw = true
-opt.list = true
+--opt.list = true
 --vim.opt.listchars:append("eol:↴")
 opt.mouse = 'a'
 opt.number = true

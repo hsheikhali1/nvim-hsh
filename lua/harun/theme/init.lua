@@ -20,7 +20,8 @@ local availableThemes = {
   "moonlight",
   "material",
   "ayu-dark",
-  "night-owl"
+  "night-owl",
+  "nightfly"
 }
 
 for _, v in ipairs(availableThemes) do

@@ -36,7 +36,7 @@ end
 
 --map("n", "<leader>p", peek_definition, opts)
 vim.keymap.set("n", "<leader>p", peek_definition, opts)
-
+vim.api.nvim_set_keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", opts)
 
 -- map jk to esc
 map("i", "jk", "<Esc>", opts)
@@ -45,7 +45,9 @@ map("i", "jk", "<Esc>", opts)
 map("n", "<Esc>", ":nohl<CR>", opts)
 
 -- Nvimtree mappings
-map("n", "<leader>a", ":NvimTreeToggle<CR>", opts)
+--map("n", "<leader>a", ":NvimTreeToggle<CR>", opts)
+map("n", "<leader>a", ":Neotree toggle<CR>", opts)
+map("n", "<leader>fa", ":Neotree float toggle<CR>", opts)
 
 
 -- telescope mappings

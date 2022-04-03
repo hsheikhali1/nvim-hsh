@@ -63,7 +63,7 @@ require("lualine").setup {
     -- component_separators = { left = '', right = '' },
     disabled_filetypes = {},
     always_divide_middle = false,
-    globalstatus = false, -- default: false
+    globalstatus = true, -- default: false
   },
   sections = {
     lualine_a = { "mode" },
