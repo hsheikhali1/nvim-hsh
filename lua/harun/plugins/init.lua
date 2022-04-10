@@ -187,6 +187,9 @@ return require("packer").startup(function()
     -- matchup
     use {"andymass/vim-matchup"}
 
+    -- float term
+    use {"voldikss/vim-floaterm"}
+
     -- themes
     use "whatsthatsmell/codesmell_dark.vim"
     use "bluz71/vim-moonfly-colors"
@@ -204,6 +207,7 @@ return require("packer").startup(function()
     use 'haishanh/night-owl.vim'
     use 'michaeldyrynda/carbon.vim'
     use 'bluz71/vim-nightfly-guicolors'
+    use { "ellisonleao/gruvbox.nvim" }
     -- experimental
     use 'MunifTanjim/nui.nvim'
     use {

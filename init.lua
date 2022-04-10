@@ -1,5 +1,6 @@
 -- Harun's config
 -- Friday Dec 24, 2021
+-- Modified Mon Apr 4, 2022
 
 vim.g.mapleader = ','
 

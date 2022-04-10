@@ -63,6 +63,9 @@ map("n", "<leader>xf", ":TroubleToggle quickfix<CR>", opts)
 map("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 
+-- floaterm
+map("n", "<leader>ft", ":FloatermToggle<CR>", opts)
+
 -- lazygit
 map("n", "<leader>gg", ":LazyGit<CR>", opts)
 

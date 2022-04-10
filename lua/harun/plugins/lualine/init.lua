@@ -1,4 +1,5 @@
 local config = require('harun.config')
+local icons  = require('harun.theme.icons')
 
 local function current_buffer_number()
   return "﬘ " .. vim.api.nvim_get_current_buf()
@@ -57,7 +58,8 @@ require("lualine").setup {
   options = {
     icons_enabled = true,
     theme = config.theme.name,
-    component_separators = { left = "⦚", right = "  " },
+    -- component_separators = { left = "⦚", right = "  " },
+    component_separators = { left = "⦚", right = icons.ghost },
     section_separators = { left = "", right = "" },
     -- section_separators = { left = '', right = '' },
     -- component_separators = { left = '', right = '' },
@@ -66,13 +68,13 @@ require("lualine").setup {
     globalstatus = true, -- default: false
   },
   sections = {
-    lualine_a = { "mode" },
+    lualine_a = {"mode"},
     lualine_b = {
       { "b:gitsigns_head", icon = "" },
       { "diff", source = diff_source },
       { "diagnostics", sources = { "nvim_diagnostic" } },
     },
-    lualine_c = { { "filename", path = 1, symbols = { modified = "[]", readonly = " " } } },
+    lualine_c = { { "filename", path = 1, symbols = { modified = " " .. icons.diff_add, readonly = " " } } },
     lualine_x = { { "filetype", icon_only = true } },
     lualine_y = { { current_buffer_number }, { current_working_dir }, { current_date } },
     lualine_z = { "location" },
@@ -80,7 +82,7 @@ require("lualine").setup {
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = { { "filename", path = 1, symbols = { modified = "[]", readonly = " " } } },
+    lualine_c = { { "filename", path = 1, symbols = { modified = " " .. icons.diff_add, readonly = " " } } },
     lualine_x = { "location" },
     lualine_y = { { current_buffer_number } },
     lualine_z = {},

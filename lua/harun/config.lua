@@ -2,11 +2,11 @@ local config = {
   theme = {
     -- name = "ayu-dark",
     -- name = "moonfly",
-    name = "night-owl",
+    -- name = "night-owl",
     -- name = "nightfly"
     -- name = "github_dark_default",
-    -- name = "material",
-    -- variant = "ocean"
+    name = "material",
+    variant = "darker"
   },
   indent = 2,
   format_on_save = false
