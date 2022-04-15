@@ -1,3 +1,5 @@
+config = require('harun.config')
+
 local merge = function(...)
   return vim.tbl_deep_extend('force', ...)
 end
@@ -64,7 +66,10 @@ map("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", opts)
 
 -- floaterm
+float_term_string = "--wintype=" .. config.float_term.position .. "<CR>"
+map("n", "<leader>fn", ":FloatermNew " .. float_term_string, opts)
 map("n", "<leader>ft", ":FloatermToggle<CR>", opts)
+map("n", "<leader>fh", ":FloatermHide!<CR>", opts)
 
 -- lazygit
 map("n", "<leader>gg", ":LazyGit<CR>", opts)

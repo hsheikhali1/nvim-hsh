@@ -10,6 +10,22 @@ cmd([[
 	autocmd BufWritePre * :%s/\s\+$//e
 ]])
 
+cmd([[
+  augroup golang
+    autocmd!
+  augroup END
+
+  autocmd golang FileType go setlocal shiftwidth=4 tabstop=4
+]])
+
+cmd([[
+  augroup html
+    autocmd!
+  augroup END
+
+  autocmd html FileType html setlocal shiftwidth=4 tabstop=4
+]])
+
 -- useful commands
 vim.cmd [[ autocmd FileType help,qf,fugitive,fugitiveblame,netrw, nnoremap <buffer><silent> q :close<CR>]]
 

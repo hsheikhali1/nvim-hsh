@@ -21,6 +21,7 @@ require('null-ls').setup({
           augroup LspFormatting
             autocmd! * <buffer>
             autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+            autocmd BufWritePre *.go lua vim.lsp.buf.formatting()
           augroup END
         ]])
       end
@@ -40,5 +41,6 @@ require('null-ls').setup({
     null_ls.builtins.code_actions.gitsigns,
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.stylua,
+    null_ls.builtins.formatting.gofmt,
   },
 })
