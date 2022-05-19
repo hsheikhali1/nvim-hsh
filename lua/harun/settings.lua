@@ -105,3 +105,8 @@ vim.g.tagalong_filetypes = {'html', 'javascriptreact', 'javascript', 'typescript
 vim.g.indent_blankline_filetype_exclude = { 'NvimTree', 'terminal' }
 vim.g.indentLine_bufNameExclude = { 'NvimTree', 'terminal' }
 vim.g.indentLine_bufTypeExclude = { 'terminal', 'NvimTree' }
+
+-- globals for deno
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}

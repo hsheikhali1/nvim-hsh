@@ -42,14 +42,28 @@ local servers = {
   'emmet_ls',
   'tailwindcss',
   'jsonls',
-  'gopls'
+  'gopls',
+  'denols'
 }
 
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    flags = {
-      debounce_text_changes = 150
+  if lsp == "denols" then
+    nvim_lsp.denols.setup {
+      on_attach = on_attach,
+      root_dir = nvim_lsp.util.root_pattern("deno.json"),
+      init_options = {
+        lint = true,
+      },
+      flags = {
+        debounce_text_changes = 150
+      }
     }
-  }
+  else
+    nvim_lsp[lsp].setup {
+      on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 150
+      }
+    }
+  end
 end
