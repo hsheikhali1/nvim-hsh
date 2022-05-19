@@ -22,7 +22,8 @@ local availableThemes = {
   "ayu-dark",
   "night-owl",
   "nightfly",
-  "dracula"
+  "dracula",
+  "lighthaus_dark",
 }
 
 for _, v in ipairs(availableThemes) do

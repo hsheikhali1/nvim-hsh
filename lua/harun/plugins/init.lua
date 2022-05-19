@@ -209,6 +209,8 @@ return require("packer").startup(function()
     use 'bluz71/vim-nightfly-guicolors'
     use "ellisonleao/gruvbox.nvim"
     use 'Mofiqul/dracula.nvim'
+    use "mrjones2014/lighthaus.nvim"
+
     -- experimental
     use 'MunifTanjim/nui.nvim'
     use {

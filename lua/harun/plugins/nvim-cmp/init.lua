@@ -26,7 +26,7 @@ local default_cmp_opts = {
       behavior = cmp.ConfirmBehavior.Insert,
       select = true,
     }),
-    ['<Tab>'] = cmp.mapping(function(fallback)
+    ['<Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
@@ -36,11 +36,8 @@ local default_cmp_opts = {
       else
         fallback()
       end
-    end, {
-      'i',
-      's',
-    }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
+    end,
+    ['<S-Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif luasnip.jumpable(-1) then
@@ -48,14 +45,13 @@ local default_cmp_opts = {
       else
         fallback()
       end
-    end, {
-      'i',
-      's',
-    }),
+    end,
   },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-    winhighlight = 'FloatBorder:FloatBorder,Normal:Normal',
+  window = {
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      winhighlight = 'FloatBorder:FloatBorder,Normal:Normal',
+    },
   },
   experimental = {
     ghost_text = true,
