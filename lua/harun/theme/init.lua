@@ -24,6 +24,7 @@ local availableThemes = {
   "nightfly",
   "dracula",
   "lighthaus_dark",
+  "vscode"
 }
 
 for _, v in ipairs(availableThemes) do

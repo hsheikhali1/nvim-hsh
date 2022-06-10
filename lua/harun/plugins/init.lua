@@ -77,15 +77,13 @@ return require("packer").startup(function()
         }, {
             'hrsh7th/cmp-path',
             after = 'nvim-cmp'
-        }, {
-            'windwp/nvim-autopairs',
-            config = function()
-                require('nvim-autopairs').setup {}
-            end,
-            after = 'nvim-cmp'
         }},
         event = 'InsertEnter'
     })
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("harun.plugins.nvim-autopairs") end
+    }
     use {
         "numToStr/Comment.nvim",
         config = function()
@@ -131,6 +129,7 @@ return require("packer").startup(function()
     }
     use "AndrewRadev/tagalong.vim"
     use 'ThePrimeagen/git-worktree.nvim'
+    use 'nvim-telescope/telescope-project.nvim'
     use "windwp/nvim-ts-autotag"
 
     -- ui
@@ -210,6 +209,7 @@ return require("packer").startup(function()
     use "ellisonleao/gruvbox.nvim"
     use 'Mofiqul/dracula.nvim'
     use "mrjones2014/lighthaus.nvim"
+    use "Mofiqul/vscode.nvim"
 
     -- experimental
     use 'MunifTanjim/nui.nvim'
@@ -219,7 +219,7 @@ return require("packer").startup(function()
         requires = {"nvim-lua/plenary.nvim", "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
         "MunifTanjim/nui.nvim"},
         config = function()
-          require('harun.plugins.neotree')
+            require('harun.plugins.neotree')
         end
     }
     use 'mg979/vim-visual-multi'

@@ -21,5 +21,13 @@ telescope.setup{
 }
 
 telescope.load_extension("git_worktree")
+telescope.load_extension("project")
 
-vim.api.nvim_set_keymap('n', '<C-T>', "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>g', "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", { noremap = true })
+
+vim.api.nvim_set_keymap(
+    'n',
+    '<leader>p',
+    ":lua require'telescope'.extensions.project.project{}<CR>",
+    {noremap = true, silent = true}
+)
