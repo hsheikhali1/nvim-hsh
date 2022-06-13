@@ -74,3 +74,4 @@ map("n", "<leader>fh", ":FloatermHide!<CR>", opts)
 -- lazygit
 map("n", "<leader>gg", ":LazyGit<CR>", opts)
 
+vim.keymap.set("n", "<leader><leader>r", "<cmd>source ~/.config/nvim/lua/harun/plugins/luasnip/init.lua<CR>")
