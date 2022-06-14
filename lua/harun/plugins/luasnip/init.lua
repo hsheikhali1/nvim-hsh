@@ -5,10 +5,13 @@ require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/lua/harun/plu
 
 -- some shorthands...
 local snippet = ls.s
+local c = ls.choice_node
+local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
 local fmt = require('luasnip.extras.fmt').fmt
 local p = ls.parser.parse_snippet
+
 -- Every unspecified option will be set to the default.
 ls.config.set_config {
   history = true,
@@ -56,7 +59,17 @@ ls.add_snippets('lua', {
         1,
       }),
     i(1),
-  }))
+  })),
+  ls.s("for", {
+    t "for ",
+    i(1, "k, v"),
+    t " in ",
+    i(2, "ipairs()"),
+    t { "do", "  " },
+    i(0),
+    t { "", "" },
+    t "end",
+  }),
 })
 
 local snippets = {
@@ -64,7 +77,16 @@ local snippets = {
   p('afn', 'const $1 = ($2)$3 => {\n  $0\n}'),
   p('rfc', 'import React from "react"\n\n type Props = {}\n\n export const $1: React.FC<Props> = ({}) => {\n   <div>$0</div>\n}\n\n'),
   p('cl', 'console.log("$0");'),
-  p('/**', "/**\n * $0\n * @param {$1} $2 $3\n *\n */"),
+  snippet('/**', fmt([[
+  /**
+   * {}
+   * @param {} {} {}
+   */]], {
+      i(0),
+      i(1, { "{type}" }),
+      i(2, { "param name" }),
+      i(3, { "description" }),
+  })),
 }
 
 ls.add_snippets('typescript', snippets)
