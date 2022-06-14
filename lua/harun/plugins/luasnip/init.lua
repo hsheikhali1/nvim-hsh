@@ -62,7 +62,9 @@ ls.add_snippets('lua', {
 local snippets = {
   p('fn', 'function $1($2)$3 {\n  $0\n}'),
   p('afn', 'const $1 = ($2)$3 => {\n  $0\n}'),
-  p('rfc', 'import React from "react"\n\n type Props = {}\n\n const $1: React.FC<Props> = ({}) => {\n   <div>$0</div>\n}\n\n export $1'),
+  p('rfc', 'import React from "react"\n\n type Props = {}\n\n export const $1: React.FC<Props> = ({}) => {\n   <div>$0</div>\n}\n\n'),
+  p('cl', 'console.log("$0");'),
+  p('/**', "/**\n * $0\n * @param {$1} $2 $3\n *\n */"),
 }
 
 ls.add_snippets('typescript', snippets)
