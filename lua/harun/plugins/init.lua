@@ -210,6 +210,9 @@ return require("packer").startup(function()
     use 'Mofiqul/dracula.nvim'
     use "mrjones2014/lighthaus.nvim"
     use "Mofiqul/vscode.nvim"
+    use({
+      "olimorris/onedarkpro.nvim",
+    })
 
     -- experimental
     use 'MunifTanjim/nui.nvim'
